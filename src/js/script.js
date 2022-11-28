@@ -1,34 +1,55 @@
+"use strict"
+// $( function() {
+//     $( "#accordion" ).accordion();
+//   } );
 
-function calculateVolumeAndArea(length) {
-    if (typeof (length) !== 'number' || length < 0 || !Number.isInteger(length)) {
-        return "При вычислении произошла ошибка";
+  const textActive = document.querySelectorAll('.tabs__text_active');
+  const titleName = document.querySelectorAll('.tabs__title');
+  const tabs = document.querySelectorAll('.tabs__list');
+  // const titleColor = document.querySelectorAll('.tabs__title_active');
+  const tabsParent = document.querySelector('.tabs__parent')
+  
+  function hideTabContent () {
+    textActive.forEach(item => {
+      item.style.display = 'none';
+    });
+  
+    tabs.forEach(item => {
+      item.classList.remove('tabs__list_active');
+    });
+  
+    titleName.forEach(item => {
+      item.classList.remove('tabs__title_active');
+    });
+  };
+  
+  function showTabContent (i = 0) {
+   
+    textActive[i].style.display = 'block';
+  
+  
+    tabs[i].classList.add('tabs__list_active');
+    
+  
+   
+    titleName[i].classList.add('tabs__title_active');
+  
+    // titleActive[i].classList.add('tabs__text_active');
+  
+  };
+  hideTabContent();
+  
+  
+  tabsParent.addEventListener('click',(event) => {
+    const target = event.target;
+    console.log('click');
+    if(target && target.classList.contains('tabs__list')){
+      tabs.forEach((item, i)=> {
+        if(target == item){
+          hideTabContent();
+          showTabContent(i);
+        }
+      });
     }
-
-    let volume = 0,
-        area = 0;
-
-    volume = length * length * length;
-    // length ** 3 - это тоже самое, что и выше или варианты через цикл.
-    // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
-    area = 6 * (length * length);
-
-    return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
-}
-
-calculateVolumeAndArea(5);
-
-function getCoupeNumber(seatNumber) {
-    if (typeof (seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
-        return "Ошибка. Проверьте правильность введенного номера места";
-    }
-
-    if (seatNumber === 0 || seatNumber > 36) {
-        return "Таких мест в вагоне не существует";
-    }
-
-    return Math.ceil(seatNumber / 4);
-    // тут очень много вариантов решения, но выбрал один из элегантных :)
-}
-
-getCoupeNumber(33);
-
+  });
+  

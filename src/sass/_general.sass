@@ -1,0 +1,157 @@
+*
+    margin: 0  
+    padding: 0
+.header
+    min-width: 1200px
+    min-height: 70px
+    background: linear-gradient(180deg, rgba(28,30,38,1) 13%, rgba(163,166,158,1) 100%)    
+    &__menu
+    &__list
+        display: flex
+        justify-content: space-between
+    &__item
+        list-style: none
+        color: #fff
+        margin-top: 25px
+        &:hover
+            content: ''
+            color: #000
+            border: 2px solid #808080
+            border-radius: 4px
+            cursor: pointer
+.promo
+    min-width: 1300px
+    min-height: 700px
+    margin-right: 0
+    background: url('../img/bg_home.jpg') center (center / cover) no-repeat
+    &__title
+        min-width: 1200px
+        height: 700px
+        left: 100px
+    &__name
+        position: relative
+        font-size: 75px
+        text-align: center
+        padding-top: 150px
+        padding-left: 50px
+        color: #A9A9A9
+        font-family: 'Rubik Glitch', cursive
+        text-transform: uppercase
+        animation-name: name
+        animation-duration: 4.2s
+        animation-timing-function: ease-in-out
+        @keyframes name
+            0%
+                top: -500px
+            25%
+                top: -105px
+            50%
+                font-size: 100px
+                top: 50px
+            100%
+                top: 200px
+                color: black
+    &__prof
+        position: relative
+        font-size: 35px
+        text-align: center
+        padding-top: 50px
+        padding-left: 110px
+        color: #A9A9A9
+        font-family: 'Rubik Glitch', cursive
+        text-transform: uppercase
+        animation-name: prof
+        animation-duration: 2.2s
+        @keyframes prof
+            0%
+                right: 0
+                font-size: 15px
+            50%
+                right: 200px
+                font-size: 35px
+            100%
+                transition-duration: 5s
+                font-style: 25px
+                right: 530px
+                color: black
+        &:hover
+            content: ''
+            color: #A9A9A9
+.about
+    min-width: 1200px
+    min-height: 500px
+    margin: 0
+    padding: 0
+    &__wrapper
+        width: 1300px
+        display: flex
+        flex-wrap: wrap
+    &__text
+        display: block
+        margin: 0 auto
+        min-width: 250px
+        min-height: 250px
+        padding-top: 50px
+        &__list
+            display: flex
+        &__item
+            list-style: none
+            padding-right: 25px
+            img
+                width: 50px
+                height: 50px
+    &__first
+        width: 500px
+        height: 750px
+        background: #D3D3D3
+    &__second
+        width: 250px
+        height: 250px
+        background:#FFDFAE
+        img
+            width: 720px
+            height: 250px
+    &__third
+        width: 250px
+        height: 250px
+        background:#696969
+        img
+            width: 750px
+            height: 200px
+    &__four
+        width: 350px
+        height: 750px
+        transform: translateY(-500px)
+        // background: #778891
+        background: url('../img/www.jpg') center (center / cover) no-repeat
+        color: #D3D3D3
+.tabs
+    width: 1200px
+    height: 700px
+    &__wrapper
+        display: flex
+        flex-direction: column
+    &__parent
+        display: flex
+        flex-direction: column
+        flex-flow: column
+        margin-top: 25px
+        padding-left: 150px
+    &__list
+        margin: 10px
+        min-width: 50px
+        height: 50px
+        cursor: pointer
+        
+    &__list_active
+        padding-right: 20px
+        width: 250px
+        height: 250px
+    &__title
+        font-size: 25px
+        margin-bottom: 10px
+    &__title_active
+        color: red
+
+
+

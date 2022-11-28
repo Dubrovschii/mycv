@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.1"
+  },
+  "name": "my-cv",
+  "version": "1.0.0",
+  "description": "my promo website",
+  "main": "gulpfile.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dubrovschii/mycv.git"
+  },
+  "author": "dubrovschii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dubrovschii/mycv/issues"
+  },
+  "homepage": "https://github.com/Dubrovschii/mycv#readme"
+}
